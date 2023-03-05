@@ -1,10 +1,31 @@
 {
-    "name": "BookMyMarks",
-    "version": "1.0",
-    "manifest_version": 2,
-    "description": "This is a sample extension",
-    "browser_action": {
-      "default_popup": "popup.html"
+  "name": "Chapter 24 (MV3)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is Chapter 24",
+  "permissions": ["bookmarks"],
+
+  "commands": {
+    "command1": {
+      "suggested_key": "Ctrl+Shift+1",
+      "description": "This is command1."
+    },
+    "command2": {
+      "suggested_key": "Ctrl+Shift+2",
+      "description": "This is command2."
+    },
+    "command3": {
+      "suggested_key": "Alt+Shift+G",
+      "description": "This is command2."
     }
-  }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
   
+  "action": {
+    "default_title": "I am Chapter 24",
+    "default_popup": "popup.html"
+  }
+}
