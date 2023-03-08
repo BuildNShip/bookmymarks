@@ -14,7 +14,7 @@
 // });
 
 chrome.commands.onCommand.addListener((command)=>{
-  chrome.tabs.create({url:chrome.runtime.getURL('popup.html')}, (tab)=>{
+  chrome.tabs.create({url:chrome.runtime.getURL('popup.html')}, (tab,w)=>{
     console.log(tab)
   })
 })
