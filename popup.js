@@ -5,7 +5,13 @@ let createBtn = document.getElementById("create-btn")
 
 searchBookmarks.onchange = ()=>{
     for (let i = 0; i < 5; i++) {
-        console.log(bookmarks_data[i])
+        // console.log(bookmarks_data[i])
+        let option = document.createElement('a')
+        
+        option.href = bookmarks_data[0][i].url
+        option.title = bookmarks_data[0][i].title
+        option.text = bookmarks_data[0][i].title
+        document.getElementById('bookmarked-items').append(`<li> ${option} </li>`)
       }
 }
 
